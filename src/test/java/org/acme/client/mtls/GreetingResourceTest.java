@@ -9,10 +9,13 @@ import io.quarkus.test.junit.mockito.InjectMock;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.is;
 
+import org.eclipse.microprofile.rest.client.inject.RestClient;
+
 @QuarkusTest
 public class GreetingResourceTest {
 
     @InjectMock
+    @RestClient
     GreetingService greetingService;
 
     @Test
